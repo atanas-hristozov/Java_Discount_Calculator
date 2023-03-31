@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.util.SimpleTimeZone;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insert number of items:");
+        String input = scanner.nextLine();
+        int n = Integer.parseInt(input);
+        double discount[] = new double[n];
+        for (int i = 0; i <n; i++) {
+            System.out.println("Add the value of item " + i + " number");
+            String input1 = scanner.nextLine();
+            double price = Double.parseDouble(input1);
+            discount[i] = price * 0.35;
+        }
+        for (int j = 0; j<n; j++) {
+            System.out.printf("Discount = %.2f%n",discount[j]);
+        }
+    }
+}
